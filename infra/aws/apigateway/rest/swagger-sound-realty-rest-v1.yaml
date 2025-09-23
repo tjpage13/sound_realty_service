@@ -1,0 +1,73 @@
+swagger: "2.0"
+info:
+  title: sound-realty-rest
+  version: "1.0"
+basePath: /v1
+schemes:
+  - https
+
+# Optional: declare JSON so consoles show it clearly
+consumes:
+  - application/json
+produces:
+  - application/json
+
+paths:
+  /healthz:
+    get:
+      summary: Liveness/Readiness check
+      responses:
+        "200":
+          description: OK
+      x-amazon-apigateway-integration:
+        type: http_proxy
+        httpMethod: GET
+        uri: "http://{{NLB_DNS}}:8080/healthz"
+        connectionType: VPC_LINK
+        connectionId: "{{VPC_LINK_ID}}"
+        passthroughBehavior: when_no_match
+
+  /predict:
+    post:
+      summary: Predict house prices (backend joins demographics)
+      description: Expects JSON { "records": [ {...}, {...} ] } like future_unseen_examples.csv rows.
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+      x-amazon-apigateway-integration:
+        type: http_proxy
+        httpMethod: POST
+        uri: "http://{{NLB_DNS}}:8080/predict"
+        connectionType: VPC_LINK
+        connectionId: "{{VPC_LINK_ID}}"
+        passthroughBehavior: when_no_match
+
+  /predict_core:
+    post:
+      summary: Predict using core feature set only
+      description: Expects JSON { "records": [ {...}, {...} ] } matching model_features.json.
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+      x-amazon-apigateway-integration:
+        type: http_proxy
+        httpMethod: POST
+        uri: "http://{{NLB_DNS}}:8080/predict_core"
+        connectionType: VPC_LINK
+        connectionId: "{{VPC_LINK_ID}}"
+        passthroughBehavior: when_no_match
+
+# Optional: enable API keys in a later pass by adding securityDefinitions + per-method security
+# securityDefinitions:
+#   api_key:
+#     type: "apiKey"
+#     name: "x-api-key"
+#     in: "header"
