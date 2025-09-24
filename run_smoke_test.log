@@ -1,0 +1,49 @@
+[Wed 09/24/2025 10:57:19.29] ========== Run started Wed 09/24/2025 10:57:19.29 ==========
+[Wed 09/24/2025 10:57:19.31] Upgrading pip...
+Requirement already satisfied: pip in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (25.2)
+[Wed 09/24/2025 10:57:20.16] Installing dependencies from requirements.txt...
+Requirement already satisfied: fastapi==0.115.0 in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from -r requirements.txt (line 1)) (0.115.0)
+Requirement already satisfied: uvicorn==0.30.6 in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from -r requirements.txt (line 2)) (0.30.6)
+Requirement already satisfied: pydantic==2.9.2 in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from -r requirements.txt (line 3)) (2.9.2)
+Requirement already satisfied: pandas==2.2.2 in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from -r requirements.txt (line 4)) (2.2.2)
+Requirement already satisfied: numpy==1.26.4 in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from -r requirements.txt (line 5)) (1.26.4)
+Requirement already satisfied: scikit-learn==1.5.2 in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from -r requirements.txt (line 6)) (1.5.2)
+Requirement already satisfied: python-multipart==0.0.9 in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from -r requirements.txt (line 7)) (0.0.9)
+Requirement already satisfied: requests==2.32.3 in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from -r requirements.txt (line 8)) (2.32.3)
+Requirement already satisfied: starlette<0.39.0,>=0.37.2 in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from fastapi==0.115.0->-r requirements.txt (line 1)) (0.38.6)
+Requirement already satisfied: typing-extensions>=4.8.0 in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from fastapi==0.115.0->-r requirements.txt (line 1)) (4.15.0)
+Requirement already satisfied: annotated-types>=0.6.0 in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from pydantic==2.9.2->-r requirements.txt (line 3)) (0.7.0)
+Requirement already satisfied: pydantic-core==2.23.4 in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from pydantic==2.9.2->-r requirements.txt (line 3)) (2.23.4)
+Requirement already satisfied: click>=7.0 in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from uvicorn==0.30.6->-r requirements.txt (line 2)) (8.3.0)
+Requirement already satisfied: h11>=0.8 in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from uvicorn==0.30.6->-r requirements.txt (line 2)) (0.16.0)
+Requirement already satisfied: python-dateutil>=2.8.2 in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from pandas==2.2.2->-r requirements.txt (line 4)) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from pandas==2.2.2->-r requirements.txt (line 4)) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from pandas==2.2.2->-r requirements.txt (line 4)) (2025.2)
+Requirement already satisfied: scipy>=1.6.0 in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from scikit-learn==1.5.2->-r requirements.txt (line 6)) (1.16.2)
+Requirement already satisfied: joblib>=1.2.0 in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from scikit-learn==1.5.2->-r requirements.txt (line 6)) (1.5.2)
+Requirement already satisfied: threadpoolctl>=3.1.0 in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from scikit-learn==1.5.2->-r requirements.txt (line 6)) (3.6.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from requests==2.32.3->-r requirements.txt (line 8)) (3.4.3)
+Requirement already satisfied: idna<4,>=2.5 in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from requests==2.32.3->-r requirements.txt (line 8)) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from requests==2.32.3->-r requirements.txt (line 8)) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from requests==2.32.3->-r requirements.txt (line 8)) (2025.8.3)
+Requirement already satisfied: anyio<5,>=3.4.0 in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from starlette<0.39.0,>=0.37.2->fastapi==0.115.0->-r requirements.txt (line 1)) (4.11.0)
+Requirement already satisfied: sniffio>=1.1 in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from anyio<5,>=3.4.0->starlette<0.39.0,>=0.37.2->fastapi==0.115.0->-r requirements.txt (line 1)) (1.3.1)
+Requirement already satisfied: colorama in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from click>=7.0->uvicorn==0.30.6->-r requirements.txt (line 2)) (0.4.6)
+Requirement already satisfied: six>=1.5 in c:\users\tyler\onedrive\desktop\phdata_homework\sound_realty_service\.venv\lib\site-packages (from python-dateutil>=2.8.2->pandas==2.2.2->-r requirements.txt (line 4)) (1.17.0)
+[Wed 09/24/2025 10:57:20.91] Starting API server at http://127.0.0.1:8080
+[Wed 09/24/2025 10:57:20.96] Waiting for server readiness (/healthz)...
+[Wed 09/24/2025 10:57:23.43] Server is ready.
+[Wed 09/24/2025 10:57:23.46] Running client: scripts\test_client.py --url http://127.0.0.1:8080 -k 3
+Status: 200
+{
+  "metadata": {
+    "timestamp_utc": "2025-09-24T15:57:25.753521Z",
+    "model_hash": "9b98c85306cd",
+    "n_predictions": 3
+  },
+  "predictions": [
+    458520.0,
+    612800.0,
+    449160.0
+  ]
+}

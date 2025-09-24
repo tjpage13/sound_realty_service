@@ -1,0 +1,10 @@
+model/*
+*.pyc
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Logs
+.log
